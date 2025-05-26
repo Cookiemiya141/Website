@@ -4,55 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Personal Branding - Rizky Aufar Adriyanto Putera</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #E2E8F0; /* Secondary */
-      color: #0F172A; /* Primary */
+      background-color: #E2E8F0;
+      color: #0F172A;
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 80px;
-      background-color: #0F172A; /* Primary */
-      color: #ffffff;
+    nav.navbar {
+      background-color: #0F172A;
     }
 
-    header .logo img {
-      height: 100px;
-    }
-
-    nav {
-      display: flex;
-      gap: 40px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #ffffff;
+    .nav-link {
       font-weight: bold;
       font-size: 16px;
-      transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #3B82F6; /* Accent */
+    .nav-link:hover {
+      color: #3B82F6 !important;
     }
 
     .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 80px;
-      background-color: #E2E8F0; /* Secondary */
-    }
-
-    .hero-text {
-      max-width: 50%;
+      background-color: #E2E8F0;
+      padding: 80px 0;
     }
 
     .hero-text h1 {
@@ -67,7 +44,7 @@
 
     .hero-text button {
       padding: 12px 30px;
-      background-color: #3B82F6; /* Accent */
+      background-color: #3B82F6;
       color: #ffffff;
       border: none;
       font-size: 16px;
@@ -76,17 +53,12 @@
     }
 
     .hero-text button:hover {
-      background-color: #2563EB; /* Darker Accent */
-    }
-
-    .hero-image img {
-      max-width: 400px;
-      height: auto;
+      background-color: #2563EB;
     }
 
     .about {
       position: relative;
-      padding: 80px;
+      padding: 80px 0;
       background-color: #ffffff;
       overflow: hidden;
     }
@@ -116,12 +88,12 @@
       font-size: 16px;
       line-height: 1.6;
       position: relative;
-      color: #334155; /* Dark Gray Text */
+      color: #334155;
     }
 
     .portfolio {
-      padding: 80px;
-      background-color: #E2E8F0; /* Secondary */
+      background-color: #E2E8F0;
+      padding: 80px 0;
     }
 
     .portfolio h2 {
@@ -131,20 +103,13 @@
       color: #0F172A;
     }
 
-    .portfolio-grid {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
     .portfolio-item {
       background-color: #ffffff;
       padding: 20px;
-      width: 250px;
       text-align: center;
-      border: 1px solid #CBD5E1; /* Light border */
+      border: 1px solid #CBD5E1;
       transition: transform 0.3s, box-shadow 0.3s;
+      margin-bottom: 20px;
     }
 
     .portfolio-item:hover {
@@ -159,9 +124,9 @@
     }
 
     .contact {
-      padding: 80px;
       background-color: #ffffff;
       text-align: center;
+      padding: 80px 0;
     }
 
     .contact h2 {
@@ -186,91 +151,139 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="Images\kucing putih.png" alt="Logo" />
-    </div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Gallery Art</a>
-      <a href="#contact">Kontak</a>
-    </nav>
-  </header>
 
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark px-5 py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="Images/kucing putih.png" alt="Logo" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Gallery Art</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
   <section class="hero" id="home">
-    <div class="hero-text">
-      <h1>Welcome to my Personal Branding Website</h1>
-      <p>"Keep it tactical"</p>
-      
-    </div>
-    <div class="hero-image">
-      <img src="Images/otot.jpg" alt="Foto Profil" />
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 hero-text">
+          <h1>Welcome to my Personal Branding Website</h1>
+          <p>"Keep it tactical"</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="Images/otot.jpg" alt="Foto Profil" class="img-fluid" style="max-width: 400px;">
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- About Section -->
   <section class="about" id="about">
-    <h2>About Me</h2>
-    <p>Hallo dan perkenalkan Saya Rizky Aufar Adriyanto Putera, mahasiswa Pendidikan Multimedia di UPI Cibiru. Saat ini, saya sedang menjalani semester 4 dan semakin tertarik mendalami dunia visual, seperti fotografi dan desain. Semoga apa yang saya bagikan di sini bisa menginspirasi dan bermanfaat.</p>
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hallo dan perkenalkan Saya Rizky Aufar Adriyanto Putera, mahasiswa Pendidikan Multimedia di UPI Cibiru. Saat ini, saya sedang menjalani semester 4 dan semakin tertarik mendalami dunia visual, seperti fotografi dan desain. Semoga apa yang saya bagikan di sini bisa menginspirasi dan bermanfaat.</p>
+    </div>
   </section>
 
+  <!-- Portfolio Section -->
   <section class="portfolio" id="portfolio">
-  <h2>Gallery Art</h2>
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="Images/Dira.png" alt="Project 1" />
-      <p>Sketsa character</p>
+    <div class="container">
+      <h2>Gallery Art</h2>
+      <div class="row justify-content-center">
+        <!-- Repeat col-md-3 for each portfolio item -->
+        <div class="col-sm-6 col-md-3">
+          <div class="portfolio-item">
+            <img src="Images/Dira.png" alt="Project 1" />
+            <p>Sketsa character</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="portfolio-item">
+            <img src="Images/KONSEP DESAIN.png" alt="Project 2" />
+            <p>Asset 2d</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="portfolio-item">
+            <img src="Images/IMG_0870.JPG" alt="Project 3" />
+            <p>Foto close up</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="portfolio-item">
+            <img src="Images/IMG_9424[1].jpg" alt="Project 4" />
+            <p>Foto panning</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="portfolio-item">
+            <img src="Images/MC.png" alt="Project 5" />
+            <p>Sketsa character</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="portfolio-item">
+            <img src="Images/NPC.png" alt="Project 6" />
+            <p>Sketsa character</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="portfolio-item">
+            <img src="Images/karakter vector.png" alt="Project 7" />
+            <p>Sketsa character</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="portfolio-item">
+            <img src="Images/aset outline.png" alt="Project 8" />
+            <p>Sketsa character</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="portfolio-item">
-      <img src="Images/KONSEP DESAIN.png" alt="Project 2" />
-      <p>Asset 2d</p>
-    </div>
-    <div class="portfolio-item">
-      <img src="Images/IMG_0870.JPG" alt="Project 3" />
-      <p>Foto close up</p>
-    </div>
-    <div class="portfolio-item">
-      <img src="Images/IMG_9424[1].jpg" alt="Project 4" />
-      <p>Foto panning</p>
-    </div>
-    <div class="portfolio-item">
-      <img src="Images\MC.png" alt="Project 5" />
-      <p>Sketsa character</p>
-    </div>
-    <div class="portfolio-item">
-      <img src="Images\NPC.png"" alt="Project 6" />
-      <p>Sketsa character</p>
-    </div>
-    <div class="portfolio-item">
-      <img src="Images\karakter vector.png" alt="Project 7" />
-      <p>Sketsa character</p>
-    </div>
-    <div class="portfolio-item">
-      <img src="Images\aset outline.png" alt="Project 8" />
-      <p>Sketsa character</p>
-    </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Contact Section -->
   <section class="contact" id="contact">
-  <h2>Contact Me</h2>
-  <p>Jika Anda tertarik untuk bekerja sama atau ingin mengenal lebih jauh, silakan hubungi saya.</p>
-  <p>Email: rizkyaufar01@upi.edu</p>
-  <p>No HP: 081231238484</p>
-  
-  <!-- Social Media Icons -->
-  <div style="margin-top: 20px;">
-    <a href="https://www.youtube.com/@yoiminya" target="_blank">
-      <img src="Images\logo youtube.png" alt="YouTube" style="width:40px; margin: 0 10px;">
-    </a>
-    <a href="https://www.instagram.com/username/" target="_blank">
-      <img src="Images\Logo instagram.png" alt="Instagram" style="width:40px; margin: 0 10px;">
-    </a>
-  </div>
-</section>
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Jika Anda tertarik untuk bekerja sama atau ingin mengenal lebih jauh, silakan hubungi saya.</p>
+      <p>Email: rizkyaufar01@upi.edu</p>
+      <p>No HP: 081231238484</p>
+      <div class="mt-3">
+        <a href="https://www.youtube.com/@yoiminya" target="_blank">
+          <img src="Images/logo youtube.png" alt="YouTube" style="width:40px; margin: 0 10px;">
+        </a>
+        <a href="https://www.instagram.com/username/" target="_blank">
+          <img src="Images/Logo instagram.png" alt="Instagram" style="width:40px; margin: 0 10px;">
+        </a>
+      </div>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 Rizky Aufar Adriyanto Putera. Semua Hak Dilindungi.
   </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
